@@ -1,30 +1,30 @@
 {
-    "name": "idarb-twitterbot",
-    "version": "1.0.0",
-    "description": "Twitterbot for IDARB Hashbombs",
-    "main": "server.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/sgraden/idarb-twitterbot.git"
-    },
-    "author": "Steven Raden",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/sgraden/idarb-twitterbot/issues"
-    },
-    "homepage": "https://github.com/sgraden/idarb-twitterbot#readme",
-    "dependencies": {
-        "twit": "^2.2.1",
-        "browser-sync": "^2.10.1",
-        "express": "^4.13.3",
-        "gulp": "^3.9.0",
-        "hbs": "^4.0.0",
-        "nodemon": "^1.8.1"
-    },
-    "devDependencies": {
-        "gulp-nodemon": "^2.0.4"
-    }
+  "name": "idarb-twitterbot",
+  "version": "1.0.0",
+  "description": "Twitterbot for IDARB Hashbombs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgraden/idarb-twitterbot.git"
+  },
+  "author": "Steven Raden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sgraden/idarb-twitterbot/issues"
+  },
+  "homepage": "https://github.com/sgraden/idarb-twitterbot#readme",
+  "dependencies": {
+    "twit": "^2.2.1",
+    "browser-sync": "^2.10.1",
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "hbs": "^4.0.0",
+    "nodemon": "^1.8.1"
+  },
+  "devDependencies": {
+    "gulp-nodemon": "^2.0.4"
+  }
 }

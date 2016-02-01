@@ -8,22 +8,23 @@ gulp.task('default', ['browser-sync'], function() {
 
 //static server
 gulp.task('browser-sync', ['nodemon'], function() {
-	browserSync.init(null, {
-		proxy: "http://localhost:8008",
-		files: ["public/**/*.*"],
-		browser: "google chrome",
-		port: 8000
-	});
+	// browserSync.init(null, {
+	// 	proxy: "http://localhost:8008",
+	// 	files: ["public/**/*.*"],
+	// 	browser: "google chrome",
+	// 	port: 8000
+	// });
 });
 
 gulp.task('nodemon', function (cb) {
 	var started = false;
 	return nodemon({
-		script: 'server.js'
+		script: 'server.js',
+		env: {'NODE_ENV': 'development'}
 	}).on('start', function () {
 		if (!started) {
 			cb();
 			started = true;
 		}
-	})
+	});
 });
