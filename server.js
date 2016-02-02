@@ -25,13 +25,19 @@ stream.on('tweet', function (t) {
   //Example tweet @idarbhash #12345
   if (t.text.toLowerCase().includes(conf.twitter.username)) {
     var tweetInfo = {
-      'text': t.text.split(" ")[1], //split at the space and take the second value
+      'gameID': t.text.split(" ")[1], //split at the space and take the gameID
       'time': Date.now()
     };
     list.push(tweetInfo);
   }
+  //start cycling through all the tweeted gameID and periodically hashbombs
+  //stop and remove gameID after x time has passed
   console.log(list);
 });
+
+//choose from a list of hashbombs and tweet it back out
+function sendHashbombs() {
+}
 
 //realistically not used
 app.get("/", function(req, res) {
