@@ -16,11 +16,29 @@ var tweeter = new Twit({
   timeout_ms: 60 * 1000
 });
 
+var list = []; //List of all the currently running tweets
+var stream = tweeter.stream('user'); //new stream tweeter for idarbhash
+//Whenever @idarbhash receives a tweet run this function with the
+//tweet object t
+stream.on('tweet', function (t) {
+  //If the tweet to me includes an @idarbhash then save it with a timestamp
+  //Example tweet @idarbhash #12345
+  if (t.text.toLowerCase().includes(conf.twitter.username)) {
+    var tweetInfo = {
+      'text': t.text.split(" ")[1], //split at the space and take the second value
+      'time': Date.now()
+    };
+    list.push(tweetInfo);
+  }
+  console.log(list);
+});
+
+//realistically not used
 app.get("/", function(req, res) {
   tweeter.post('statuses/update', {
     status: 'hello world!'
   }, function(err, data, response) {
-    console.log(data);
+    //console.log(data);
   });
   res.sendFile(__dirname + "/public/views/index.html"); //Sends back index.html
 });
