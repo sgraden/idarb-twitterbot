@@ -6,3 +6,10 @@ Uses:
 * Nodejs
 * Expressjs
 * Twitter API
+* Grunt
+
+Build:
+* Clone the repo
+* NPM Install
+* In the root of repo run "grunt"
+* Or running node server.js should work fine.
